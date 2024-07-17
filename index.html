@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página Web</title>
+    <title>Minha Empresa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,7 +36,7 @@
         }
         main {
             padding: 2em;
-            max-width: 800px;
+            max-width: 1200px;
             margin: auto;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -56,33 +56,116 @@
         .content-section h2 {
             color: #4CAF50;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 0.5em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bem-vindo à Minha Página Web</h1>
+        <h1>Bem-vindo à Minha Empresa</h1>
     </header>
     <nav>
         <a href="#home">Home</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#fornecedores">Fornecedores</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
     </nav>
     <main>
         <section id="home" class="content-section">
             <h2>Home</h2>
-            <p>Esta é a página inicial. Aqui você pode encontrar informações gerais sobre o site.</p>
+            <p>Bem-vindo ao site da nossa empresa. Aqui você encontrará informações sobre nossos produtos e serviços.</p>
         </section>
-        <section id="about" class="content-section">
-            <h2>Sobre</h2>
-            <p>Esta seção contém informações sobre o propósito do site e sua criação.</p>
+        <section id="clientes" class="content-section">
+            <h2>Clientes</h2>
+            <p>Valorizamos nossos clientes e estamos comprometidos em fornecer o melhor serviço possível.</p>
         </section>
-        <section id="contact" class="content-section">
+        <section id="fornecedores" class="content-section">
+            <h2>Fornecedores</h2>
+            <p>Trabalhamos com fornecedores de confiança para garantir a qualidade dos nossos produtos.</p>
+        </section>
+        <section id="produtos" class="content-section">
+            <h2>Produtos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Produto 1</td>
+                        <td>Descrição do Produto 1</td>
+                        <td>R\$ 100,00</td>
+                    </tr>
+                    <tr>
+                        <td>Produto 2</td>
+                        <td>Descrição do Produto 2</td>
+                        <td>R\$ 200,00</td>
+                    </tr>
+                    <tr>
+                        <td>Produto 3</td>
+                        <td>Descrição do Produto 3</td>
+                        <td>R\$ 300,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="contato" class="content-section">
             <h2>Contato</h2>
-            <p>Entre em contato conosco através do email: exemplo@dominio.com</p>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Minha Página Web. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Minha Empresa. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
